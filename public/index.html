@@ -1,0 +1,12 @@
+<!Doctype html>
+<html>
+  <body>
+    Hello world
+    <script>
+      const ws = new WebSocket("ws://localhost:3000");
+      ws.onopen = function (event) {
+        ws.send("Here's some text that the server is urgently awaiting!");
+      };
+    </script>
+  </body>
+</html>
